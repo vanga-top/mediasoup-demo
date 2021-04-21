@@ -2,8 +2,21 @@ const fs = require('fs');
 const child_process = require('child_process');
 
 const workBin = '/Users/chenhui/github/mediasoup/worker/out/Release/mediasoup-worker';
-let spawnArgs  = ['--logLevel=warn','--logTag=info','-logTag=ice','--rtcMinPort=40000','--rtcMaxPort=49999'];
-const workArgs = '--logLevel=warn --logTag=info --logTag=ice --logTag=dtls --logTag=rtp --logTag=srtp --logTag=rtcp --logTag=rtx --logTag=bwe --logTag=score --logTag=simulcast --logTag=svc --logTag=sctp --rtcMinPort=40000 --rtcMaxPort=49999';
+const spawnArgs  = ['--logLevel=warn',
+                '--logTag=info',
+                '-logTag=ice',
+                '--logTag=dtls',
+                '--logTag=rtp',
+                '--logTag=srtp',
+                '--logTag=rtcp',
+                '--logTag=rtx',
+                '--logTag=bwe',
+                '--logTag=score',
+                '--logTag=simulcast',
+                '--logTag=svc',
+                '--logTag=sctp',
+                '--rtcMinPort=40000',
+                '--rtcMaxPort=49999'];
 
 let child =  child_process.spawn(
     workBin,
